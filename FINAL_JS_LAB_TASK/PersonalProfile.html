@@ -1,0 +1,194 @@
+<html>
+
+<head>
+
+    <title>Person Profile</title>
+</head>
+
+<body>
+        <table border="1">
+            <tr>
+                <td colspan="3" align="center">
+                    <h3>PERSON PROFILE</h3>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Name
+
+                </td>
+                <td>
+                    <input id="name" type="text" name="uname" value="" placeholder="">
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input id="email" type="email" name="email" value="">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input id="gender1" type="radio" name="gender" value="Male" placeholder=""> Male
+                    <input id="gender2" type="radio" name="gender" value="Female" placeholder=""> Female
+                    <input id="gender3" type="radio" name="gender" value="Other" placeholder=""> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Date of Birth
+                </td>
+                <td>
+                    <input id="dd" type="pin" name="dob" size="1"> <b>/</b>
+                    <input id="mm" type="pin" name="dob" size="1"> <b>/</b>
+                    <input id="yyyy" type="pin" name="dob" size="1"> (dd//mm//yyy)
+                </td>
+            </tr>
+            <tr>
+                <td>Blood Group</td>
+                <td>
+                    <select name="bg">
+                        <option value="">A+</option>
+                        <option value="">B+</option>
+                        <option value="">AB+</option>
+                        <option value="">O+</option>
+                        <option value="">A-</option>
+                        <option value="">B-</option>
+                        <option value="">AB-</option>
+                        <option value="">O-</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Degree
+                </td>
+                <td>
+                    <input id="degree" type="checkbox" name="" value=""> SSC
+                    <input id="degree" type="checkbox" name="" value="">HSC
+                    <input id="degree" type="checkbox" name="" value=""> BSc
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Photo
+                </td>
+                <td>
+                    <input type="file" name="myPicture"> <br>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="3" align="right">
+                    <input type="reset" name="" value="Clear" placeholder="">
+                    <button onclick="getVal()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+		function getVal(){
+			let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let n1 = document.getElementById('dd').value;
+            let n2 = document.getElementById('mm').value;
+            let n3 = document.getElementById('yyyy').value;
+            
+
+
+			if(name != ''){
+                if(name.length<2 && (name>='A' && name<='Z' || name>='a' && name<='z')){
+                    alert('Name:Contains at least two words');
+                    }
+			    else if(name>='0' && name<='9'){
+                    alert('Name:Must be starts with letter');
+                    }
+                else if(name >='0'  && name<='9' || name=='~' || name=='!' || name=='@' || name =='#' || name=='$' || name=='%' || name=='^' || name=='&' || name=='*' || name=='()'|| name=='/' ){
+                    alert('Name:Can contain a-zor A-Zor dot(.) or dash(-)');
+			    }
+			    else{
+
+                }
+            }else
+				alert('Name:null value');
+				    
+            
+
+
+
+            if(email != ''){
+                var atposition=email.indexOf("@");  
+                var dotposition=email.lastIndexOf("."); 
+				if (atposition<1 || dotposition<atposition+2 || dotposition+2>=emial.length){  
+                alert("Please enter a valid e-mail address");  
+                return false;  
+                }  
+			}
+			else{
+				alert('Email:null value');
+			}
+
+
+
+
+            if(document.getElementById('gender1').checked) {     
+            }   
+            else if(document.getElementById('gender2').checked) {    
+            }   
+            else if(document.getElementById('gender3').checked) {      
+            }      
+            else {   
+                alert('Gender:null value');   
+            }   
+
+
+            if(n1 != "" && n2 != "" && n3 != ""){
+                if(n1>=0 && n1<=31){
+                    
+                }
+                else{
+                    alert('range dd:0-31');
+                }
+
+                if(n2>=1 && n2<=12){
+                    
+                }
+                else{
+                    alert('range mm:1-12');
+                }
+
+             if(n3>=1900 && n3<=2021){
+                    
+                }
+                else{
+                    alert('range mm:1900-2021');
+                }
+			}
+            else{
+				alert('Date of Birth:null value');
+			}
+        }
+	</script>
+</body>
+
+</html>
