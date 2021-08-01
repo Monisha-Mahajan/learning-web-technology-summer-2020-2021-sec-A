@@ -1,0 +1,113 @@
+<?php
+
+    $idErr = $passwordErr = $conPasswordErr = $NameErr =$emailErr =  $typeErr ="" ;
+
+      $id = "";
+      $userName= "";
+      $password= "";
+      $conPassword = "";
+      $Name = ""; 
+      $email = "";
+      $type = "";
+      
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<fieldset style ="margin: 0px 480px ;">
+		<legend>REGISTRATION</legend>
+		<form method="POST" action="Controller/regcheck.php">
+			<table>
+			<tr>
+				<td><b>Id</td>
+				<td><input type="text" name="id" value="<?php echo $id;?>"></td>
+			</tr>
+
+			<tr>
+            	<td colspan=2><p style="color:red"><?php echo $idErr; ?></p></td>
+            </tr>
+
+			<tr>
+				<td><b>Password</td>
+				<td><input type="password" name="password" value="<?php echo $password;?>"></td>
+			</tr>
+
+			<tr>
+            	<td colspan=2><p style="color:red"><?php echo $passwordErr; ?></td>
+            </tr>
+
+			<tr>
+				<td><b>Confirm Password</td>
+				<td><input type="password" name="conPassword" value="<?php echo $conPassword;?>"></td>
+			</tr>
+
+			<tr>
+            	<td colspan=2><br></td>
+            </tr>
+
+			<tr>
+					<td><b>Name </td>
+                    <td>
+                    <input type="text" name="name" value="<?php echo $Name;?>">
+                    </td>
+			</tr>
+
+			<tr>
+            	<td colspan=2><p style="color:red"><?php echo $NameErr; ?></p></td>
+            </tr>
+
+			<tr>
+					<td><b>Email </td>
+                    <td>
+                    <input type="text" name="email" value="<?php echo $email;?>">
+                    </td>
+			</tr>
+
+			<tr>
+            	<td colspan=2><p style="color:red"><?php echo $emailErr; ?></p></td>
+            </tr>
+
+			<tr>
+				<td>
+					<b>User Type
+				</td>
+                <td>
+
+                 <select name = "User" style="width: 70px; height: 30px;">
+                    <option selected disabled> Select</option> 
+                    <option value = "Admin"> Admin </option>
+                    <option value = "User"> User </option>
+                 </select>  
+      
+                </td>
+            </tr>
+
+            <tr>
+            	<td colspan=2><p style="color:red"><?php echo $typeErr; ?></p></td>
+            </tr>
+
+            <tr>
+            	<td colspan="2">
+            		<hr>
+            	</td>
+            </tr>
+
+            <tr>
+            	<td>
+            		<input type="submit" name="Register" Value="Registar" style="width: 100px; height: 30px;">
+            	</td>
+            	<td>
+            		<a href="View/login.php">Login</a>
+            	</td>
+            </tr>
+			</table>
+		</form>
+
+	</fieldset>
+
+</body>
+</html>
