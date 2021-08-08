@@ -10,8 +10,7 @@
 		$sql = "select * from registration where id = '$id' and password = '$password'";
 		$result = mysqli_query($conn, $sql);
 		$details = mysqli_fetch_assoc($result);
-		//print_r($name);
-		//echo $name['name'];
+		
 	}
 
 ?>

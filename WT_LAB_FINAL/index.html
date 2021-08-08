@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<center>
+<form method="POST" action="../WT_LAB_FINAL/controller/regiCheck.php">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<fieldset>
+					<legend><h3> REGISTRATION</h3></legend>
+					Password<br/><input type="password" name="password" value=""><br/>
+					Name<br/><input id="name" type="text" name="name" value=""><br/>
+					Company name<br/><input id="cname" type="text" name="cname" value=""><br/>
+					Contact_no<br/><input id="contactno" type="text" name="cname" value=""><br/>
+					User_name<br/><input id="uname" type="text" name="uname" value=""><br/>
+					<hr/>
+					<input type="submit" name="submit" value="Registration" onclick="getName()"submit>
+					<a href="../FINAL_MINI_PROJECT/view/login.html">Login</a>
+				</fieldset>
+			</td>
+		</tr>                                
+	</table>
+</form>
+</center>
+
+<script>
+		"use strict"
+
+
+			function getName(){
+			let name = document.getElementById('name').value;
+
+			if(name != ''){
+				
+				
+			}else{
+				alert('null value');
+			}
+			
+		}
+	</script>
+</body>
+</html>
